@@ -658,7 +658,7 @@
   var dRiposo = [].map.call(capelliEl, function (p) { return p.getAttribute('d'); });
   var STOP = {};
   ['lg', 'lr', 'sc'].forEach(function (g) { var gr = svgC && svgC.querySelector('#g-' + g); STOP[g] = gr ? gr.querySelectorAll('stop') : []; });
-  var faseC = 'fatta', rafC = 0, guardiaC = 0, ultimoN = 0;
+  var faseC = 'fatta', rafC = 0, guardiaC = 0, ultimoN = 0, larghezzaAvvio = 0;
 
   var rgb = function (h) { return [parseInt(h.slice(1, 3), 16), parseInt(h.slice(3, 5), 16), parseInt(h.slice(5, 7), 16)]; };
   var GR = {};
@@ -727,6 +727,7 @@
     figura.classList.add('ciocca--corso');
     root.classList.remove('firma-attesa');
     faseC = 'corre'; figura.setAttribute('data-firma', 'corre');
+    larghezzaAvvio = window.innerWidth;
     var t0 = null;
     function fotogramma(ts) {
       rafC = 0;
@@ -808,7 +809,9 @@
     var ancora = location.hash && location.hash.length > 1 && location.hash !== '#apertura';
     if (!daFare || ancora || !inVistaCiocca()) chiudiCiocca();
     else soffiaCiocca();
-    window.addEventListener('resize', function () { if (faseC === 'corre') chiudiCiocca(); });
+    /* 28/9 (#228): un resize chiude la firma solo se cambia la LARGHEZZA. Sul telefono arriva un resize a vuoto subito
+       dopo il caricamento (e altri della sola altezza, la barra del browser): chiudevano l'air touch appena partito */
+    window.addEventListener('resize', function () { if (faseC === 'corre' && Math.abs(window.innerWidth - larghezzaAvvio) > 1) chiudiCiocca(); });
     if (soffia) soffia.addEventListener('click', function () { if (faseC === 'fatta' && !reducedMotion) soffiaCiocca(); });
   }
 })();
