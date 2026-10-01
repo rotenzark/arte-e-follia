@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
 <script>(function(){var r=document.documentElement;r.classList.remove('no-js');
 /* la firma: finché main.js non parte, la ciocca è castana e l'aria è ferma; se il codice non arriva, dopo 2,5 s la pagina va allo stato finale */
 try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches){r.classList.add('firma-attesa');window.__attesaCiocca=setTimeout(function(){r.classList.remove('firma-attesa')},2500)}}catch(e){}})()</script>
@@ -20,9 +21,7 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches){r.classList.add(
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,600;1,400;1,500&amp;family=Michroma&amp;family=Birthstone&amp;family=Anuphan:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fonts/fonts.css?v=1">
 <link rel="stylesheet" href="css/styles.css?v=1">
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
@@ -379,23 +378,23 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches){r.classList.add(
     </ul>
     <div class="recensioni__elenco">
       <blockquote class="recensione reveal">
-        <p>«Io mi siedo, fornisco qualche indicazione e loro riescono non solo a realizzare ma anche ad ottimizzare cio' che avevo in mente (o a farmi cambiare del tutto idea!!). <span class="taglio">[…]</span> Chiunque stesse cercando un parrucchiere di fiducia, puo' smettere di googlare, lo ha trovato! <span class="taglio">[…]</span>»</p>
+        <p lang="it">«Io mi siedo, fornisco qualche indicazione e loro riescono non solo a realizzare ma anche ad ottimizzare cio' che avevo in mente (o a farmi cambiare del tutto idea!!). <span class="taglio">[…]</span> Chiunque stesse cercando un parrucchiere di fiducia, puo' smettere di googlare, lo ha trovato! <span class="taglio">[…]</span>»</p>
         <footer>Mariana Rullo · <span data-i18n="r.google">su Google</span></footer>
       </blockquote>
       <blockquote class="recensione reveal">
-        <p>«Parrucchiere di fiducia da Anni.Sono ragazze dolcissime e molto attente non solo ai vostri capelli ma anche a voi. <span class="taglio">[…]</span> quando non sono convinte di una richiesta te lo dicono e non fanno di testa loro come spesso succede in altri parrucchieri. <span class="taglio">[…]</span>»</p>
+        <p lang="it">«Parrucchiere di fiducia da Anni.Sono ragazze dolcissime e molto attente non solo ai vostri capelli ma anche a voi. <span class="taglio">[…]</span> quando non sono convinte di una richiesta te lo dicono e non fanno di testa loro come spesso succede in altri parrucchieri. <span class="taglio">[…]</span>»</p>
         <footer>Giada Mesoraca · <span data-i18n="r.google">su Google</span></footer>
       </blockquote>
       <blockquote class="recensione reveal">
-        <p>«Super Gentili, disponibili, professionali e d organizzate. Elisabetta la titolare è davvero sempre solare ed accogliente, con questo sorriso che conquista tutti.Bravissimi anche con i bambini.»</p>
+        <p lang="it">«Super Gentili, disponibili, professionali e d organizzate. Elisabetta la titolare è davvero sempre solare ed accogliente, con questo sorriso che conquista tutti.Bravissimi anche con i bambini.»</p>
         <footer>Valentina Vergati · <span data-i18n="r.google">su Google</span></footer>
       </blockquote>
       <blockquote class="recensione reveal">
-        <p>«Consiglio vivamente! Sono molto brave, ascoltano le tue esigenze e cercano di darti i migliori consigli in base a ciò che desideri. Ho fatto un taglio drastico e sono felicissima di aver trovato loro! Grazie!»</p>
+        <p lang="it">«Consiglio vivamente! Sono molto brave, ascoltano le tue esigenze e cercano di darti i migliori consigli in base a ciò che desideri. Ho fatto un taglio drastico e sono felicissima di aver trovato loro! Grazie!»</p>
         <footer>Daniela Bello · <span data-i18n="r.google">su Google</span></footer>
       </blockquote>
       <blockquote class="recensione reveal">
-        <p>«E bello uscire da un salone dopo essere state coccolate,il personale e disponibile e gentile,la titolare Elisabetta e' solare e da i giusti consigli. Ci vorrebbero più negozi così a Milano complimenti»</p>
+        <p lang="it">«E bello uscire da un salone dopo essere state coccolate,il personale e disponibile e gentile,la titolare Elisabetta e' solare e da i giusti consigli. Ci vorrebbero più negozi così a Milano complimenti»</p>
         <footer>Rosa Giordano · <span data-i18n="r.google">su Google</span></footer>
       </blockquote>
     </div>
@@ -435,7 +434,7 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches){r.classList.add(
       </div>
       <div class="dove__vista reveal">
         <div class="mappa">
-          <iframe title="Mappa: Arte &amp; Follia, Via Giuseppe Meda 37, Milano" data-i18n-title="d.mappa" src="https://maps.google.com/maps?q=Arte%20e%20follia%20milano%2C%20Via%20Giuseppe%20Meda%2037%2C%20Milano&amp;z=16&amp;output=embed" width="600" height="340" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <div class="mappa-clic" data-mappa-clic style="--mappa-h: 340px"><template><iframe title="Mappa: Arte &amp; Follia, Via Giuseppe Meda 37, Milano" data-i18n-title="d.mappa" src="https://maps.google.com/maps?q=Arte%20e%20follia%20milano%2C%20Via%20Giuseppe%20Meda%2037%2C%20Milano&amp;z=16&amp;output=embed" width="600" height="340" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></template><div class="mappa-clic__velo"><a class="mappa-clic__btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Arte+e+follia+milano,+Via+Giuseppe+Meda+37,+Milano" target="_blank" rel="noopener">Mostra la mappa</a><p class="mappa-clic__nota">La mappa è di Google: aprendola, Google riceve il tuo indirizzo IP e può usare i suoi cookie.</p></div></div>
         </div>
         <figure class="foto foto--banco">
           <button class="foto__apri" type="button" data-full="img/banco.jpg" aria-label="Ingrandisci la foto" data-i18n-aria="m.ingrandisci"><img src="img/banco.jpg" width="1000" height="910" alt="Il banco all'ingresso: nero, con le lettere dorate ARTE &amp; FOLLIA MILANO, il piano di marmo grigio e dietro gli scaffali" data-i18n-alt="d.alt"></button>
@@ -457,7 +456,7 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches){r.classList.add(
 <footer class="piede">
   <p class="piede__marchio">ARTE &amp; FOLLIA <span>MILANO</span></p>
   <p class="piede__dove">Via Giuseppe Meda 37, 20141 Milano · <a href="tel:+390289404709">02 8940 4709</a></p>
-  <p class="piede__cred" data-i18n="z.cred">Sito dimostrativo realizzato da <a href="https://bespokestud.io" rel="noopener">Bespoke Studio</a> · servizi e voti da Treatwell, foto e recensioni dalla scheda Google, le loro parole dal loro Instagram (settembre 2026). Le ciocche sono disegnate.</p>
+  <p class="piede__cred" data-i18n="z.cred">Sito dimostrativo realizzato da <a href="https://bespokestud.io" rel="noopener">Bespoke Studio</a> · <a href="privacy.html">Privacy</a> · servizi e voti da Treatwell, foto e recensioni dalla scheda Google, le loro parole dal loro Instagram (settembre 2026). Le ciocche sono disegnate.</p>
   <p><a class="piede__su" href="#apertura" data-i18n="z.su">Torna su ↑</a></p>
 </footer>
 
@@ -466,5 +465,6 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches){r.classList.add(
   <img id="lightboxImg" src="" alt="">
 </div>
 
+<script src="js/mappa-clic.js?v=1" defer></script>
 </body>
 </html>
